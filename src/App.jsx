@@ -20,13 +20,22 @@ function App() {
         </div>
       </header>
 
-      {/* Main Content Area – keeps the original stack */}
-      <main className="flex-grow transition-all ease-in flex flex-col md:flex-row">
-        <Home />
-        <div className="flex-grow relative">
+      {/* Main Content – Prioritize Canvas + Customizer side-by-side or stacked quick */}
+      <main className="flex-grow flex flex-col lg:flex-row">
+        {/* Home – assuming intro text, keep it compact or optional */}
+        <div className="lg:w-1/5 p-4">
+          <Home />
+        </div>
+
+        {/* Canvas – center piece, limit height so customizer isn't buried */}
+        <div className="flex-grow relative min-h-[60vh] lg:min-h-[80vh] max-h-[80vh] overflow-hidden">
           <Canvas />
         </div>
-        <Customizer />
+
+        {/* Customizer – sidebar on desktop, full-width below canvas on mobile – now visible without deep scroll */}
+        <div className="lg:w-80 xl:w-96 bg-gray-900/80 backdrop-blur-md border-l border-red-600/30 lg:border-l p-4 lg:p-6 overflow-y-auto max-h-[80vh] lg:max-h-screen">
+          <Customizer />
+        </div>
       </main>
 
       {/* Footer */}
