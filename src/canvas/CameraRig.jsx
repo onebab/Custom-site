@@ -14,7 +14,7 @@ const CameraRig = ({ children }) => {
       if (isMobile) targetPosition = [0, 0.2, 3.8];  // farther on small screens
 
       camera.position.set(...targetPosition);
-      camera.lookAt(0, 0, 0);  // ensure looking at center
+      camera.lookAt(0, 0.1, 0);  // ensure looking at center
       camera.updateProjectionMatrix();
     };
 
