@@ -40,12 +40,13 @@ const CanvasModel = () => {
         <OrbitControls
           enableZoom={true}
           enablePan={true}
-          minDistance={1.0}     // allow closer zoom
+          minDistance={1.0}
           maxDistance={10}
-          minPolarAngle={Math.PI / 12}
-          maxPolarAngle={Math.PI - Math.PI / 12}
+          minPolarAngle={Math.PI / 5}     // restrict upward tilt (prevents looking straight down from top)
+          maxPolarAngle={Math.PI - Math.PI / 5}  // restrict downward tilt
           enableDamping
           dampingFactor={0.08}
+          target={[0, 0.1, 0]}  // slight upward offset – keeps collar in frame on zoom
         />
       </Canvas>
     </div>
