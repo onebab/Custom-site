@@ -23,7 +23,9 @@ function App() {
       {/* Main Content – Back to original simple stack, no forced sidebars or height limits */}
       <main className="flex-grow transition-all ease-in">
         <Home />
-        <Canvas />
+        <div className="relative w-full flex-grow min-h-[50vh]">
+          <Canvas />
+        </div>
         <Customizer />
       </main>
 
