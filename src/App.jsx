@@ -29,14 +29,14 @@ function App() {
         <Customizer />
       </main>
 
-      {/* Footer */}
-      <footer className="w-full bg-black/80 py-6 border-t border-gray-800 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Sticky Footer Bar – always in view, no scroll needed for contact */}
+      <footer className="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-md border-t border-red-600/40 py-3 z-50 shadow-2xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
           <p className="text-gray-300">
-            Ready to print? Email your final design to <span className="text-red-400 font-semibold">print@pawprintamerica.com</span>
+            Ready to print? Email final design to <span className="text-red-400 font-bold">print@pawprintamerica.com</span>
           </p>
-          <p className="mt-2 text-sm text-gray-500">
-            Questions? Call/WhatsApp: 305-335-7856 • Powered by PawPrint America – 25+ Years of Rebel Printing
+          <p className="mt-1 text-gray-400">
+            Call/WhatsApp: <span className="text-red-400">305-335-7856</span> • PawPrint America – 25+ Years of Rebel Printing
           </p>
         </div>
       </footer>
