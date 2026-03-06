@@ -20,26 +20,15 @@ function App() {
         </div>
       </header>
 
-      {/* Main Content – Prioritize Canvas + Customizer side-by-side or stacked quick */}
-      <main className="flex-grow flex flex-col lg:flex-row">
-        {/* Home – assuming intro text, keep it compact or optional */}
-        <div className="lg:w-1/5 p-4">
-          <Home />
-        </div>
-
-        {/* Canvas – center piece, limit height so customizer isn't buried */}
-        <div className="flex-grow relative min-h-[60vh] lg:min-h-[80vh] max-h-[80vh] overflow-hidden">
-          <Canvas />
-        </div>
-
-        {/* Customizer – sidebar on desktop, full-width below canvas on mobile – now visible without deep scroll */}
-        <div className="lg:w-80 xl:w-96 bg-gray-900/80 backdrop-blur-md border-l border-red-600/30 lg:border-l p-4 lg:p-6 overflow-y-auto max-h-[80vh] lg:max-h-screen">
-          <Customizer />
-        </div>
+      {/* Main Content – Back to original simple stack, no forced sidebars or height limits */}
+      <main className="flex-grow transition-all ease-in">
+        <Home />
+        <Canvas />
+        <Customizer />
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-black/80 py-6 border-t border-gray-800">
+      <footer className="w-full bg-black/80 py-6 border-t border-gray-800 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-300">
             Ready to print? Email your final design to <span className="text-red-400 font-semibold">print@pawprintamerica.com</span>
